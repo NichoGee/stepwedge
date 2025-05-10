@@ -1,0 +1,356 @@
+[ T i t l e ]
+Aluminum at 60KeV
+
+[ P a r a m e t e r s ]
+ icntl    =           0     # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
+ maxcas   =           1000000    # (D=10) number of particles per one batch
+ maxbch   =           10     # (D=10) number of batches
+
+[ S o u r c e ]
+   s-type =   2             # mono-energetic axial source
+     proj =  PHOTON    # kind of incident particle         
+     x0 = 0
+     x1 = 12
+     y0 = 1.5    
+     y1 = 3
+     z0 = -20 
+     z1 = -19.9
+     dir = 1.0
+     phi = 0
+     dom = 0.0
+     e0 = 0.06
+
+[ M a t e r i a l ]
+mat[1]    14N      8.0000000E+00
+          16O      2.0000000E+00
+mat[2]    Al 1
+[Mat Name Color]
+    mat     name    color
+     1       Air     pastelblue
+     2       Al      yellowgreen
+
+[ S u r f a c e ]
+   9  rpp -100 100 -100 100 -100 100 $VOID
+   10 rpp 0 1.5 1.5 3 0 0.1 
+   11 rpp 1.5 3 1.5 3 0 0.2 
+   12 rpp 3 4.5 1.5 3 0 0.3
+   13 rpp 4.5 6 1.5 3 0 0.4
+   14 rpp 6 7.5 1.5 3 0 0.5
+   15 rpp 7.5 9 1.5 3 0 0.6
+   16 rpp 9 10.5 1.5 3 0 0.7
+   17 rpp 10.5 12 1.5 3 0 0.8
+   18 rpp 0 1.5 1.5 3 -0.1 0
+   19 rpp 1.5 3 1.5 3 -0.1 0
+   20 rpp 3 4.5 1.5 3 -0.1 0
+   21 rpp 4.5 6 1.5 3 -0.1 0
+   22 rpp 6 7.5 1.5 3 -0.1 0 
+   23 rpp 7.5 9 1.5 3 -0.1 0
+   24 rpp 9 10.5 1.5 3 -0.1 0
+   25 rpp 10.5 12 1.5 3 -0.1 0
+   26 rpp 0 1.5 1.5 3 0.1 0.2 
+   27 rpp 1.5 3 1.5 3 0.2 0.3 
+   28 rpp 3 4.5 1.5 3 0.3 0.4
+   29 rpp 4.5 6 1.5 3 0.4 0.5
+   30 rpp 6 7.5 1.5 3 0.5 0.6
+   31 rpp 7.5 9 1.5 3 0.6 0.7
+   32 rpp 9 10.5 1.5 3 0.7 0.8
+   33 rpp 10.5 12 1.5 3 0.8 0.9
+
+[ C e l l ]
+ 100    1 -1.23e-3  -9 #102 #103 #104 #105 #106 #107 #108 #109 #110 #111 #112 #113 #114 #115 #116 #117 #118 #119 #120 #121 #122 #123 #124 #125
+ 101   -1        9 $VOID
+ 102    2 -2.7  -10 
+ 103    2 -2.7  -11
+ 104    2 -2.7  -12
+ 105    2 -2.7  -13
+ 106    2 -2.7  -14
+ 107    2 -2.7  -15
+ 108    2 -2.7  -16
+ 109    2 -2.7  -17
+ 110    1 -1.23e-3  -18
+ 111    1 -1.23e-3  -19
+ 112    1 -1.23e-3  -20
+ 113    1 -1.23e-3  -21
+ 114    1 -1.23e-3  -22
+ 115    1 -1.23e-3  -23
+ 116    1 -1.23e-3  -24
+ 117    1 -1.23e-3  -25
+ 118    1 -1.23e-3  -26
+ 119    1 -1.23e-3  -27
+ 120    1 -1.23e-3  -28
+ 121    1 -1.23e-3  -29
+ 122    1 -1.23e-3  -30
+ 123    1 -1.23e-3  -31
+ 124    1 -1.23e-3  -32
+ 125    1 -1.23e-3  -33
+
+[ T - T r a c k ]
+     mesh =  xyz            # mesh type is xyz scoring mesh
+   x-type =    2            # x-mesh is linear given by xmin, xmax and nx
+       nx =  200            # number of x-mesh points
+     xmin =  0        # minimum value of x-mesh points
+     xmax =   12           # maximum value of x-mesh points
+   y-type =    1            # y-mesh is given by the below data
+       ny =    1            # number of y-mesh points
+           1.5 3
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+       nz =  200            # number of z-mesh points
+     zmin =  -1           # minimum value of z-mesh points
+     zmax =  2           # maximum value of z-mesh points
+   #t-type =    2            # t-mesh is linear given by tmin, tmax and nt
+       #nt =    20           # number of t-mesh points
+     #tmin =   0.0           # minimum value of t-mesh points
+     #tmax =   1.0           # maximum value of t-mesh points
+     part =  all      
+   e-type =    1            # e-mesh is given by the below data
+       ne =    1            # number of e-mesh points
+            0.0  1000.0
+     unit =    1            # unit is [1/cm^2/source]
+     axis =   xz            # axis of output
+     file = Aluminum_60KeV.out  # file name of output for the above axis
+    title = Aluminum at 60KeV
+    gshow =    3            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 110
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      110   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell110.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 111
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      111   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell111.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 112
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      112   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell112.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 113
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      113   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell113.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 114
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      114   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell114.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 115
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      115   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell115.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 116
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      116   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell116.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 117
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      117   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell117.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 118
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      118   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell118.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 119
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      119   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell119.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 120
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      120   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell120.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 121
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      121   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell121.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 122
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      122   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell122.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 123
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      123   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell123.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 124
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      124   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell124.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ T - Deposit ]
+    title = Energy deposition in reg mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 125
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    2      125   1.5*1.5*0.1
+     unit =    1            # unit is [MeV/cm^3/source]
+   output =  dose           # total deposit energy
+     axis =   reg           # axis of output
+     file = Aluminum_60KeVCell125.out     # file name of output for the above axis
+     part =  all      
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+
+[ E n d ]
