@@ -32,16 +32,16 @@
 
                           ____ [ Job Title ] ___ 
                          |                      |
-                         |  Aluminum at 120KeV  |
+                         |  Aluminum at 150KeV  |
                          |______________________|
 
                         Starting Date = 2025-03-18
-                        Starting Time = 17h 09m 23
+                        Starting Time = 14h 04m 36
 
 >>> Input Echo >>>=============================================================
 
 [ Title ]
-Aluminum at 120KeV
+Aluminum at 150KeV
 
 [ Parameters ]
  icntl    =           0     # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
@@ -52,7 +52,7 @@ Aluminum at 120KeV
   totfact =   1.0000        # (D=1.0) global factor
    s-type =   2             # rectangular-solid source
      proj =  photon         # kind of incident particle         
-       e0 =  0.12000        # energy of beam [MeV/n]
+       e0 =  0.15000        # energy of beam [MeV/n]
        x0 =   0.0000        # minimum position of x-axis [cm]
        x1 =   12.000        # maximum position of x-axis [cm]
        y0 =   1.5000        # minimum position of y-axis [cm]
@@ -160,7 +160,7 @@ MAT[ 2 ]
      2     Al     1.00     yellowgreen   # {  0.700  1.000  1.000 }
 
 [ T-Track ]
-    title = Aluminum at 120KeV
+    title = Aluminum at 150KeV
      mesh =  xyz            # mesh type is xyz scoring mesh
    x-type =    2            # x-mesh is linear given by xmin, xmax and nx
      xmin =   0.000000      # minimum value of x-mesh points
@@ -268,7 +268,7 @@ MAT[ 2 ]
  material =  all            # (D=all) number of specific material
   2D-type =    3            # 1:Cont, 2:Clust, 3:Color, 4:xyz, 5:mat, 6:Clust+Cont, 7:Col+Cont
      axis =      xz            # axis of output
-     file = Aluminum_120KeV.out  # file name of output for the above axis
+     file = Aluminum_150KeV.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    3            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -292,7 +292,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell110.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell110.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -316,7 +316,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell111.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell111.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -340,7 +340,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell112.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell112.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -364,7 +364,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell113.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell113.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -388,7 +388,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell114.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell114.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -412,7 +412,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell115.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell115.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -436,7 +436,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell116.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell116.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -460,7 +460,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell117.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell117.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -484,7 +484,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell118.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell118.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -508,7 +508,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell119.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell119.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -532,7 +532,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell120.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell120.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -556,7 +556,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell121.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell121.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -580,7 +580,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell122.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell122.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -604,7 +604,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell123.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell123.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -628,7 +628,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell124.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell124.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -652,7 +652,7 @@ MAT[ 2 ]
    output =  dose           # total deposit energy
   deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
      axis =   reg           # axis of output
-     file = Aluminum_120KeVCell125.out  # file name of output for the above axis
+     file = Aluminum_150KeVCell125.out  # file name of output for the above axis
      part =  all      
 # kf/name :  0        
     gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
@@ -698,52 +698,52 @@ MAT[ 2 ]
 -------------------------------------------------------------------------------
 bat[       1] ncas =        1000000.
  bitrseed = 0100001010011000001011101100011110011000110110100110010000000000
-          cpu time =   2 m. 45.36 s.
+          cpu time =   1 m. 34.39 s.
 
 -------------------------------------------------------------------------------
 bat[       2] ncas =        2000000.
  bitrseed = 0101101000001110011101111011110101001001010001111010111000101101
-          cpu time =   2 m. 40.57 s.
+          cpu time =   1 m. 23.12 s.
 
 -------------------------------------------------------------------------------
 bat[       3] ncas =        3000000.
  bitrseed = 0000111001110000100000000101110001100100110011010001011101101101
-          cpu time =   2 m. 20.69 s.
+          cpu time =   1 m.  3.06 s.
 
 -------------------------------------------------------------------------------
 bat[       4] ncas =        4000000.
  bitrseed = 0001111010010101100111110011000000011100001100110000010100000010
-          cpu time =   1 m.  9.98 s.
+          cpu time =   1 m.  2.95 s.
 
 -------------------------------------------------------------------------------
 bat[       5] ncas =        5000000.
  bitrseed = 1010101001111100000000100111110100111101110011001011111110101011
-          cpu time =   1 m. 55.14 s.
+          cpu time =   1 m.  3.00 s.
 
 -------------------------------------------------------------------------------
 bat[       6] ncas =        6000000.
  bitrseed = 0110111011001101101010001011110101111001001101001110111111100011
-          cpu time =   2 m. 32.65 s.
+          cpu time =   1 m.  3.32 s.
 
 -------------------------------------------------------------------------------
 bat[       7] ncas =        7000000.
  bitrseed = 1000001101001111111010001110011000000010111010110011001100011111
-          cpu time =   2 m. 35.55 s.
+          cpu time =   1 m.  2.78 s.
 
 -------------------------------------------------------------------------------
 bat[       8] ncas =        8000000.
  bitrseed = 0100100110001011110001100101100111010001000111001110111010010011
-          cpu time =   2 m. 34.60 s.
+          cpu time =   1 m.  2.23 s.
 
 -------------------------------------------------------------------------------
 bat[       9] ncas =        9000000.
  bitrseed = 0111100000001011101111000100001111010000101000001011011000101111
-          cpu time =   2 m. 30.57 s.
+          cpu time =   1 m.  2.09 s.
 
 -------------------------------------------------------------------------------
 bat[      10] ncas =       10000000.
  bitrseed = 0110011101000010001011101011101101010010110110000011011000100001
-          cpu time =   2 m. 32.66 s.
+          cpu time =   1 m.  1.84 s.
 
 ===============================================================================
 
@@ -762,11 +762,11 @@ bat[      10] ncas =       10000000.
         7              0.   : termination by geometry error   
         8              0.   : termination by weight cut-off   
         9              0.   : termination by time cut-off     
-       10       39516501.   : geometry boundary crossing      
+       10       39678541.   : geometry boundary crossing      
        11              0.   : termination by energy cut-off   
-       12        9840040.   : termination by escape or leakage
-       13         159960.   : reaction : (n,x) type           
-       14        2088377.   : reaction : (n,n'x) type         
+       12        9917707.   : termination by escape or leakage
+       13          82293.   : reaction : (n,x) type           
+       14        1946023.   : reaction : (n,n'x) type         
        15              0.   : sequential transport for tally  
 
 -------------------------------------------------------------------------------
@@ -778,17 +778,17 @@ bat[      10] ncas =       10000000.
 -------------------------------------------------------------------------------
  prod. particles       number        weight        weight per source
 -------------------------------------------------------------------------------
-     photon             5363.     5.3630000E+03     5.3630000E-04
+     photon             2721.     2.7210000E+03     2.7210000E-04
 
 -------------------------------------------------------------------------------
  stop. particles.    number        weight        weight per source
 -------------------------------------------------------------------------------
-     electron           5363.     5.3630000E+03     5.3630000E-04
+     electron           2721.     2.7210000E+03     2.7210000E-04
 
 -------------------------------------------------------------------------------
  leak. particles       number        weight        weight per source
 -------------------------------------------------------------------------------
-     photon          9840040.     9.8400400E+06     9.8400400E-01
+     photon          9917707.     9.9177070E+06     9.9177070E-01
 
 -------------------------------------------------------------------------------
  source: maxcas    maxbch      irskip   average weight          total source
@@ -810,26 +810,26 @@ bat[      10] ncas =       10000000.
 
 -------------------------------------------------------------------------------
  job termination date : 2025/03/18
-                 time :   17:33:07
+                 time :   14:15:58
 
 -------------------------------------------------------------------------------
     CPU time and number of event called in PHITS
 -------------------------------------------------------------------------------
 
                              sec
-total cpu time =         1424.02
+total cpu time =          681.95
 
 
                            count
-      analysis =       61604888.  : data processing
+      analysis =       61624574.  : data processing
          nevap =              0.  : evaporation
         dexgam =              0.  : de-excitation
-         nreac =        2248337.  : atomic and nuclear reactions
+         nreac =        2028316.  : atomic and nuclear reactions
          dklos =              0.  : particle decay
          hydro =              0.  : nucleon-nucleon scattering
         n-data =              0.  : neutron data library
         h-data =              0.  : p, d, a data library
-        p-data =        2248337.  : photon data library
+        p-data =        2028316.  : photon data library
         e-data =              0.  : electron data library
         p-egs5 =              0.  : photon interaction with EGS5
         e-egs5 =              0.  : electron interaction with EGS5
